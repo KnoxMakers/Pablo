@@ -15,18 +15,33 @@ There's an [Instructables article](https://www.instructables.com/Polargraph-Draw
 Note that an older version of Processing (2.2.1) is required for this to work.
 
 ## Installation
-* Download install.sh to some location on your computer. It doesn't really matter where.
-* Open up a terminal window and switch to the directory you placed install.sh into.
-* Run the command: `./install.sh` in the terminal.
+* Clone this github repository.
+* In the cloned directory, run the command `sudo ./install.sh` in the terminal.
+
+You must have sudo access, as the script makes some changes to groups and permissions that require elevated access.
 
 This script will create a directory named "pablo" in your home directory. This includes the processing application file required to run Pablo. It also creates a directory named "sketchbook" in your home directory. This is the default location in which Processing stores its sketchbooks. Finally, it adds a desktop icon that runs Processing and loads the polargraphcontroller sketchbook that works as an interface for sending a drawing to the hardware.
 
-The installer downloads some software. The install should be pretty quick but depends on download speed for those software packages. The installer also puts a launcher on your desktop.
+The installer downloads some software (Processing 2.2.1 and Polar Graph Controller 1.1.17) from their external repos. The install should be pretty quick but depends on download speed for those software packages. The installer also puts a launcher on your desktop.
 
 ## Running Pablo
-Once you've installed the software, look for the launcher on your desktop and click or double click to load. 
+Once you've installed the software, look for the launcher on your desktop and click or double click to load the Processing IDE. Within this, press the "play" button (a right-arrow). This will launch a user interface with lots of ugly buttons in it and an area to display a drawing.
 
-More instructions on the steps to use the software to send an image to the hardware will follow.
+If you wish to draw Tesla, as we have typically done for demos of the Pablo machine, press the "Draw Tesla" button in the user interface (second column of buttons on the main screen once you've pressed the "play" button). This should automatically prepare the software to send the Tesla image to the drawing machine.
+
+If you wish to load a different svg file, you'll need to manually do some steps that our customizations for the Tesla button do for you. They're as follows:
+
+# Press the "Clear Queue" button.
+# Press the "Set Home" button.
+# Press the "Pen Lift" button.
+# Press the "Load Vectors" button and select the svg file that you wish to have the robot draw.
+# If desired, press the buttons to resize or move the image.
+# Press the "Draw Vectors" button.
+# Press the "Pen Lift" button.
+# Press the "Return to Home" button.
+# Click the red text near the top right that includes the word "QUEUE PAUSED" to start the drawing.
+
+What's happening when you click these buttons is that you're adding a series of commands to a command list that the software then sends to the Arduino device to be executed in order. The "Draw Tesla" button just happens to cue up these commands automatically for you.
 
 ## License
 Sources for the images in this repo are unknown, and they should not be considered to be open source. The install script is open source, let's say GPL 3.
