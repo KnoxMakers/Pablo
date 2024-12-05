@@ -1,6 +1,5 @@
 - Documentation
 - Test on shop laptop
-- Add "Tesla" button to simplify steps.
 
 
 DONE
@@ -9,3 +8,4 @@ DONE
 - Add dialout group
 - Load pablo.properties automatically (required for sizing to work)
 - Update desktop icon?
+- Add "Tesla" button to simplify steps.
