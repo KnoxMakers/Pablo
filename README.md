@@ -27,7 +27,7 @@ The installer downloads some software (Processing 2.2.1 and Polar Graph Controll
 ## Running Pablo
 Once you've installed the software, look for the launcher on your desktop and click or double click to load the Processing IDE. Within this, press the "play" button (a right-arrow). This will launch a user interface with lots of ugly buttons in it and an area to display a drawing.
 
-If you wish to draw Tesla, as we have typically done for demos of the Pablo machine, press the "Draw Tesla" button in the user interface (second column of buttons on the main screen once you've pressed the "play" button). This should automatically prepare the software to send the Tesla image to the drawing machine.
+If you wish to draw Tesla, as we have typically done for demos of the Pablo machine, press the "Draw Tesla" button in the user interface. This should automatically prepare the software to send the Tesla image to the drawing machine.
 
 If you wish to load a different svg file, you'll need to manually do some steps that our customizations for the Tesla button do for you. They're as follows:
 
